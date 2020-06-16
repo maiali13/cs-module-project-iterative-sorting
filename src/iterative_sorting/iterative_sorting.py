@@ -34,14 +34,15 @@ def bubble_sort(arr):
     If elements in wrong position (relative to each other, swap them)
     If no swaps performed, stop. 
     Else, go back to the element at index 0 and repeat step 1.
-
     """
+    #recursive implementation
     for x in range(0, len(arr) - 1):
         for y in range(0, len(arr) - (x + 1)):
             if arr[y] > arr[y + 1]:
-                temp = arr[y]
-                arr[y] = arr[y + 1]
-                arr[y + 1] = temp
+                arr[y], arr[y+1] = arr[y+1], arr[y] # swap if elements arent in order
+                #temp = arr[y]
+                #arr[y] = arr[y + 1]
+                #arr[y + 1] = temp
 
     return arr
 
