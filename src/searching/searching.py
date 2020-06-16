@@ -23,12 +23,12 @@ def binary_search(arr, target):
             Eliminate the LHS of list. Repeat step 1 with only the RHS of the list.
     """
     low = 0
-    high = len(arr)
+    high = len(arr) - 1
 
     while high > low:
         mid = (low + high) // 2
         if arr[mid] == target:
-            # Found!!
+            # instantly found!!
             return mid
 
         if arr[mid] > target:
